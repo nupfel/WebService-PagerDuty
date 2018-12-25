@@ -1,0 +1,268 @@
+=pod
+
+=encoding UTF-8
+
+=head1 NAME
+
+WebService::PagerDuty - WebService::PagerDuty - an interface to PagerDuty's RESTful Web API using Web::API
+
+=head1 VERSION
+
+version 0.1
+
+=head1 SYNOPSIS
+
+Please refer to the API documentation at L<https://v2.developer.pagerduty.com/docs/rest-api>
+
+    use WebService::PagerDuty;
+    use Data::Printer;
+    
+    my $pd = WebService::PagerDuty->new(
+        debug   => 1,
+        api_key => ''w_8PcNuhHa-y3xYdmc1x',
+    );
+    
+    p $pd->oncalls;
+
+=head1 SUBROUTINES/METHODS
+
+=head2 abilities
+
+=head2 test_ability
+
+=head2 addons
+
+=head2 install_addon
+
+=head2 delete_addon
+
+=head2 addon
+
+=head2 update_addon
+
+=head2 escalation_policies
+
+=head2 create_escalation_policy
+
+=head2 delete_escalation_policy
+
+=head2 escalation_policy
+
+=head2 update_escalation_policy
+
+=head2 extension_schemas
+
+=head2 extension_schema
+
+=head2 extensions
+
+=head2 create_extension
+
+=head2 delete_extension
+
+=head2 extension
+
+=head2 update_extension
+
+=head2 incidents
+
+=head2 create_incident
+
+=head2 manage_incidents
+
+=head2 merge_incidents
+
+=head2 incident
+
+=head2 update_incident
+
+=head2 incident_log_entries
+
+=head2 notes
+
+=head2 create_note
+
+=head2 status_update
+
+=head2 responder_request
+
+=head2 snooze_incident
+
+=head2 alerts
+
+=head2 manage_alerts
+
+=head2 alert
+
+=head2 update_alert
+
+=head2 priorities
+
+=head2 response_play
+
+=head2 log_entries
+
+=head2 log_entry
+
+=head2 maintenance_windows
+
+=head2 create_maintenance_window
+
+=head2 delete_maintenance_window
+
+=head2 maintenance_window
+
+=head2 update_maintenance_window
+
+=head2 notifications
+
+=head2 oncalls
+
+=head2 schedules
+
+=head2 create_schedules
+
+=head2 preview_schedule
+
+=head2 delete_schedule
+
+=head2 schedule
+
+=head2 update_schedule
+
+=head2 overrides
+
+=head2 create_override
+
+=head2 delete_override
+
+=head2 schedule_oncalls
+
+=head2 services
+
+=head2 create_service
+
+=head2 delete_service
+
+=head2 service
+
+=head2 update_service
+
+=head2 create_integration
+
+=head2 integration
+
+=head2 update_integration
+
+=head2 teams
+
+=head2 create_team
+
+=head2 delete_team
+
+=head2 team
+
+=head2 update_team
+
+=head2 remove_team_escalation_policy
+
+=head2 add_team_escalation_policy
+
+=head2 remove_team_user
+
+=head2 add_team_user
+
+=head2 users
+
+=head2 create_user
+
+=head2 delete_user
+
+=head2 user
+
+=head2 update_user
+
+=head2 user_contact_methods
+
+=head2 create_user_contact_method
+
+=head2 delete_user_contact_method
+
+=head2 user_contact_method
+
+=head2 update_user_contact_method
+
+=head2 user_notification_rules
+
+=head2 create_user_notification_rule
+
+=head2 delete_user_notification_rule
+
+=head2 user_notification_rule
+
+=head2 update_user_notification_rule
+
+=head2 vendors
+
+=head2 vendor
+
+=head1 INTERNALS
+
+=head2 BUILD
+
+basic configuration for the client API happens usually in the BUILD method when using Web::API
+
+=head1 BUGS
+
+Please report any bugs or feature requests on GitHub's issue tracker L<https://github.com/<github_user>/WebService::PagerDuty/issues>.
+Pull requests welcome.
+
+=head1 SUPPORT
+
+You can find documentation for this module with the perldoc command.
+
+    perldoc WebService::PagerDuty
+
+You can also look for information at:
+
+=over 4
+
+=item * GitHub repository
+
+L<https://github.com/<github_user>/WebService::PagerDuty>
+
+=item * MetaCPAN
+
+L<https://metacpan.org/module/WebService::PagerDuty>
+
+=item * AnnoCPAN: Annotated CPAN documentation
+
+L<http://annocpan.org/dist/WebService::PagerDuty>
+
+=item * CPAN Ratings
+
+L<http://cpanratings.perl.org/d/WebService::PagerDuty>
+
+=back
+
+=head1 ACKNOWLEDGEMENTS
+
+=over 4
+
+=item * Lenz Gschwendtner (@norbu09), for being an awesome mentor and friend.
+
+=back
+
+=head1 AUTHOR
+
+Tobias Kirschstein <lev@cpan.org>
+
+=head1 COPYRIGHT AND LICENSE
+
+This software is Copyright (c) 2018 by Tobias Kirschstein.
+
+This is free software, licensed under:
+
+  The (three-clause) BSD License
+
+=cut
