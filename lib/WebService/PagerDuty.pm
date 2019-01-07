@@ -284,7 +284,7 @@ has 'commands' => (
             merge_incidents => {
                 path    => 'incidents/:id/merge',
                 method  => 'PUT',
-                wrapper => 'source_incidents'
+                wrapper => 'source_incidents',
             },
             incident        => { path => 'incidents/:id' },
             update_incident => {
@@ -304,7 +304,7 @@ has 'commands' => (
                 path   => 'incidents/:id/responder_request',
                 method => 'POST',
                 mandatory =>
-                    [ 'requester_id', 'message', 'responder_request_targets' ]
+                    [ 'requester_id', 'message', 'responder_request_targets' ],
             },
             snooze_incident => {
                 path      => 'incidents/:id/snooze',
@@ -354,7 +354,7 @@ has 'commands' => (
             update_maintenance_window => {
                 path    => 'maintenance_windows/:id',
                 method  => 'PUT',
-                wrapper => 'maintenance_window'
+                wrapper => 'maintenance_window',
             },
 
             # notifications
@@ -366,23 +366,26 @@ has 'commands' => (
             # schedules
             schedules        => {},
             create_schedules => {
-                path      => 'schedules',
-                method    => 'POST',
-                wrapper   => 'schedule',
-                mandatory => [ 'type', 'time_zone', 'schedule_layers' ]
+                path       => 'schedules',
+                method     => 'POST',
+                wrapper    => 'schedule',
+                mandatory  => [ 'type', 'time_zone', 'schedule_layers' ],
+                query_keys => ['overflow'],
             },
             preview_schedule => {
-                path      => 'schedules/preview',
-                method    => 'POST',
-                wrapper   => 'schedule',
-                mandatory => [ 'type', 'time_zone', 'schedule_layers' ],
+                path       => 'schedules/preview',
+                method     => 'POST',
+                wrapper    => 'schedule',
+                mandatory  => [ 'type', 'time_zone', 'schedule_layers' ],
+                query_keys => [ 'since', 'until', 'overflow' ],
             },
             delete_schedule => { path => 'schedules/:id', method => 'DELETE' },
             schedule        => { path => 'schedules/:id' },
             update_schedule => {
-                path    => 'schedules/:id',
-                method  => 'PUT',
-                wrapper => 'schedule',
+                path       => 'schedules/:id',
+                method     => 'PUT',
+                wrapper    => 'schedule',
+                query_keys => ['overflow'],
             },
             overrides       => { path => 'schedules/:id/overrides' },
             create_override => {
@@ -434,7 +437,7 @@ has 'commands' => (
                 path      => 'teams',
                 method    => 'POST',
                 wrapper   => 'team',
-                mandatory => [ 'type', 'name' ]
+                mandatory => [ 'type', 'name' ],
             },
             delete_team => { path => 'teams/:id', method => 'DELETE' },
             team        => { path => 'teams/:id' },
